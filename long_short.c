@@ -15,7 +15,17 @@ int main(int argc, char *argv[]) {
     FILE *destFile2 = fopen(argv[3], "w");
     
     if(!srcFile) {
-        printf("Can't open a file.\n");
+        printf("Can't open a src file.\n");
+        printf("Exiting...\n");
+        exit(1);
+    }
+    if(!destFile1) {
+        printf("Can't open a first destinaton file.\n");
+        printf("Exiting...\n");
+        exit(1);
+    }
+    if(!destFile2) {
+        printf("Can't open a second destination file.\n");
         printf("Exiting...\n");
         exit(1);
     }
